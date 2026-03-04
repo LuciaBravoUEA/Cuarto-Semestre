@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventario de Productos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/about">Acerca de</a>
+        <a href="/inventario">Inventario</a>
+    </nav>
+
+    <!-- Logo arriba de la tabla -->
+    <div class="logo-portada">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo Viveres TENZIN">
+    </div>
+
+    <!-- Título de la sección -->
+    <h2 class="titulo-inventario">Inventario de Productos</h2>
+
+    <!-- Tabla de productos -->
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Acciones</th>
+        </tr>
+        {% for producto in productos %}
+        <tr>
+            <td>{{ producto[0] }}</td>
+            <td>{{ producto[1] }}</td>
+            <td>{{ producto[2] }}</td>
+            <td>{{ producto[3] }}</td>
+            <td>
+                <a href="{{ url_for('editar', id=producto[0]) }}" class="btn-accion">Editar</a>
+                <a href="{{ url_for('eliminar', id=producto[0]) }}" class="btn-accion">Eliminar</a>
+                <a href="{{ url_for('buscar') }}" class="btn-accion">Buscar</a>
+                <a href="{{ url_for('agregar') }}" class="btn-accion">Agregar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <!-- Footer -->
+    <footer class="footer-principal">
+        Proyecto Flask - Inventario Semana 10
+    </footer>
+</body>
+</html>

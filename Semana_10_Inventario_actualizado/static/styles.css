@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.titulo-principal {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2em;       /* más grande y destacado */
+    color: #007BFF;       /* azul para resaltar */
+}
+
+.titulo-inventario {
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: blue;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 60%;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* NUEVO: estilos para el logo */
+.logo-portada {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.logo-portada img {
+    max-width: 300px;       /* ajusta tamaño del logo */
+    border-radius: 10px;    /* esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* sombra ligera */
+}
+
+/* NUEVO: estilos para el footer */
+.footer-principal {
+    text-align: center;
+    font-size: 0.9em;   /* letras más pequeñas */
+    color: #555;
+    margin-top: 50px;
+}
+/* NUEVO: estilos para los botones de acción */
+.btn-accion {
+    margin: 2px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #bcbe11;
+    color: rgb(5, 5, 5);
+}
+
+.btn-accion:hover {
+    background-color: #0098b3;
+}
